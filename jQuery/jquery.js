@@ -1,11 +1,13 @@
-$("body").append("<button id=buttonSubmit>Alert Button</Submit>")
+$("body").append("<button id='buttonSubmit'>Alert Button</Submit>")
 $("#buttonSubmit").click(function () {
     alert("This button has been clicked!")
 })
 
-$("#target").submit(function () {
-    alert($("#txt").val());
-});
+
+let formText = $("input[type='text']")
+$("#submitButton").click(function () {
+    alert(formText.val())
+})
 
 $("#div").on("mouseover", function () {
 
@@ -17,7 +19,7 @@ $("#div").on("mouseout", function () {
     $("#div").css("background-color", "white")
 })
 
-$("body").append("<p id=paragraph> This is some text for testing purposes</p>")
+$("body").append("<p id='paragraph'> This is some text for testing purposes</p>")
 $("#paragraph").click(function () {
     $("#paragraph").css("color", getRandomColor)
 })
