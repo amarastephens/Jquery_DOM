@@ -59,16 +59,17 @@ btn2.addEventListener("click", function () {
 let friends = ["Ryan", "Autumn", "Ella", "Meghan", "Zac", "TJ", "Will", "Jenna", "Blake", "Avery"]
 
 friendsButton = document.querySelector("#friend-button")
-
+let counter = 0
 friendsButton.addEventListener("click", function () {
-  
-   
+    
+    if (counter< friends.length) {
+    let li = document.createElement("li")
+    let ul = document.querySelector("#ul")
+    ul.appendChild(li)
 
-    for (let i = 0; i < friends.length; i++) {
-        let li = document.createElement("li")
-        let ul = document.querySelector("#ul")
-        ul.appendChild(li)
-        li.textContent = friends[i]
+        li.textContent = friends[counter]
+        counter++
+      
 
     }
 

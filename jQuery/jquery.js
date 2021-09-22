@@ -31,21 +31,20 @@ function getRandomColor() {
     return color;
 }
 
-$("body").append("<button id=anotherbutton> Name Button </button>")
-$("body").append("<div id=div2></div")
+$("body").append("<button id='anotherbutton'> Name Button </button>")
+$("body").append("<div id='div2'></div")
 
 $("#anotherbutton").click(function () {
     $("body").append("<span> Amara Stephens </span>")
 })
 let friends = ["Ryan", "Autumn", "Ella", "Meghan", "Zac", "TJ", "Will", "Jenna", "Blake", "Avery"]
-
+let counter=0
 $("#friend-button").click(function () {
-    $("#ul").append("<li id=list></li>")
+    if (counter< friends.length) {
+    $("#ul").append(`<li id="list">${friends[counter]}</li>`) }
+counter++
 
-    $("#list").each(function(){
-        $(this).text(friends)
-        
-   });
+
 });
          
 
